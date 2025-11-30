@@ -1,4 +1,4 @@
-# SimpleDb - BaseModel
+# SimpleDb
 
 Una librería de abstracción de base de datos ligera y segura para PHP, basada en PDO. Diseñada para funcionar como un query builder simple o una capa tipo ORM en aplicaciones MVC.
 
