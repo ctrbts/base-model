@@ -1,4 +1,4 @@
-# SimpleDb
+# BaseModel
 
 Una librería de abstracción de base de datos ligera y segura para PHP, basada en PDO. Diseñada para funcionar como un query builder simple o una capa tipo ORM en aplicaciones MVC.
 
@@ -15,14 +15,14 @@ Este repositorio contiene una versión modernizada y refactorizada del clásico 
 Instalar vía composer:
 
 ```bash
-composer require ctrbts/simple-db
+composer require ctrbts/base-model
 ```
 
 ## Cambios Principales (Refactorización)
 
 Esta librería ha sido actualizada para cumplir con estándares modernos de PHP y seguridad:
 
-1. Namespace: Se ha introducido el namespace SimpleDb. Deberás actualizar tus llamadas new BaseModel(...) a new SimpleDb\BaseModel(...) o agregar use SimpleDb\BaseModel;.
+1. Namespace: Se ha introducido el namespace BaseModel. Deberás actualizar tus llamadas new BaseModel(...) a new BaseModel\BaseModel(...) o agregar use BaseModel\BaseModel;.
 2. Tipado Estricto: Se ha implementado declare(strict_types=1) y tipado fuerte en propiedades y argumentos de métodos. Esto previene errores silenciosos y mejora la estabilidad.
 3. Seguridad en Constructor: Se eliminó el uso inseguro de "variables variables" ($$key) en el constructor. Ahora los parámetros se asignan de manera explícita y controlada.
 4. Sanitización: Mejorada la sanitización en cláusulas ORDER BY y nombres de tablas para prevenir inyecciones SQL en identificadores.
@@ -35,7 +35,7 @@ Nota de compatibilidad: Aunque el código interno ha cambiado drásticamente, se
 
 Si conoces la librería original de tommyknocker, notarás que su versión 2.0+ ha evolucionado hacia un framework de base de datos completo con ORM, migraciones y CLI, similar a Eloquent o Doctrine.
 
-Esta refactorización (SimpleDb) mantiene la filosofía original:
+Esta refactorización (BaseModel) mantiene la filosofía original:
 
 - Ligereza: Todo el código reside en una sola clase. No hay sobrecarga de cientos de archivos incluidos.
 - Simplicidad: Es un drop-in replacement para sistemas legacy o frameworks ligeros que solo necesitan un wrapper de PDO robusto y un Query Builder, sin la complejidad de un Active Record completo.
@@ -44,7 +44,7 @@ Esta refactorización (SimpleDb) mantiene la filosofía original:
 ## Uso Básico
 
 ```php
-use SimpleDb\BaseModel;
+use BaseModel\BaseModel;
 ```
 
 ### Inicialización
@@ -108,7 +108,3 @@ Las contribuciones son bienvenidas. Por favor asegura que cualquier cambio pase 
 Trabajo Original: Este proyecto es un fork modernizado de la librería [pdo-database-class](https://github.com/tommyknocker/pdo-database-class) creada por tommyknocker. Se basa en la arquitectura de la versión 1.x, antes de que el proyecto original evolucionara hacia un framework completo en su versión 2.0.
 
 Refactorización: La modernización a PHP 8, tipado estricto y mejoras de seguridad fue realizada con la asistencia de IA, siguiendo el mismo proceso de calidad aplicado en proyectos similares como la [Refactorización de TimThumb](https://github.com/ctrbts/secure-timthumb).
-
-## Licencia
-
-LGPL v3

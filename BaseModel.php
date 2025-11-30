@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SimpleDb;
+namespace BaseModel;
 
 use Exception;
 use Generator;
@@ -18,7 +18,7 @@ use PDOStatement;
  * A lightweight PDO wrapper for MVC applications.
  *
  * @category Database Access
- * @package  SimpleDb
+ * @package  BaseModel
  * @license  LGPL v3 http://opensource.org/licenses/lgpl-3.0.html
  */
 class BaseModel
